@@ -100,4 +100,30 @@
   transform: scale(1.2);
   box-shadow: 0 0 25px #00f7ff;
 }
+/* SEAT TIERS */
+.seat.courtside {
+  border-color: #ffd700;
+  box-shadow: 0 0 15px #ffd700;
+}
+
+.seat.club {
+  border-color: #00f7ff;
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+.seat.upper {
+  border-color: #ff00ff;
+  box-shadow: 0 0 15px #ff00ff;
+}
+
+/* AVAILABLE SEAT PULSE */
+.seat.available {
+  animation: seatPulse 1.8s infinite;
+}
+
+@keyframes seatPulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
 
