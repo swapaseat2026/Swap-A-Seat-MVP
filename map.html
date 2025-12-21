@@ -33,15 +33,16 @@
         <div class="field"></div>
 
         <!-- SEATS -->
-        <div class="seat courtside available" style="top:10px; left:140px;" onclick="goSwap()">CS</div>
+        <div class="seat courtside available" style="top:10px; left:140px;" onclick="pickSeat('Courtside (CS)')">CS</div>
 
-        <div class="seat club available" style="top:60px; left:40px;" onclick="goSwap()">CL</div>
-        <div class="seat club" style="top:60px; right:40px;" onclick="goSwap()">CL</div>
+        <div class="seat club available" style="top:60px; left:40px;" onclick="pickSeat('Club (CL) - Left')">CL</div>
+        <div class="seat club" style="top:60px; right:40px;" onclick="pickSeat('Club (CL) - Right')">CL</div>
 
-        <div class="seat upper available" style="bottom:60px; left:40px;" onclick="goSwap()">201</div>
-        <div class="seat upper" style="bottom:60px; right:40px;" onclick="goSwap()">202</div>
+        <div class="seat upper available" style="bottom:60px; left:40px;" onclick="pickSeat('Upper 201')">201</div>
+        <div class="seat upper" style="bottom:60px; right:40px;" onclick="pickSeat('Upper 202')">202</div>
 
-        <div class="seat courtside available" style="bottom:10px; left:140px;" onclick="goSwap()">VIP</div>
+        <div class="seat courtside available" style="bottom:10px; left:140px;" onclick="pickSeat('VIP Courtside')">VIP</div>
+
 
 
       </div>
