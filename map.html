@@ -1,32 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pick Your Section</title>
+
+  <!-- THIS IS THE IMPORTANT LINE -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
+
+  <div class="header">
+    SeatSwap
+    <div class="slogan">Pick Your Section</div>
+  </div>
 
   <div class="container">
 
-  <h2>Pick Your Section</h2>
-  <p>Tap a glowing section to request a swap</p>
+    <p>Tap a glowing section to request a swap</p>
 
-  <div class="stadium-wrapper">
-    <div class="stadium">
+    <div class="stadium-wrapper">
+      <div class="stadium">
 
-      <div class="field"></div>
+        <div class="field"></div>
 
-      <!-- SEATS -->
-      <div class="seat" style="top:10px; left:140px;" onclick="goSwap()">101</div>
-      <div class="seat" style="top:60px; left:40px;" onclick="goSwap()">102</div>
-      <div class="seat" style="top:60px; right:40px;" onclick="goSwap()">103</div>
+        <!-- SEATS -->
+        <div class="seat" style="top:10px; left:140px;" onclick="goSwap()">101</div>
+        <div class="seat" style="top:60px; left:40px;" onclick="goSwap()">102</div>
+        <div class="seat" style="top:60px; right:40px;" onclick="goSwap()">103</div>
 
-      <div class="seat" style="bottom:60px; left:40px;" onclick="goSwap()">201</div>
-      <div class="seat" style="bottom:60px; right:40px;" onclick="goSwap()">202</div>
-      <div class="seat" style="bottom:10px; left:140px;" onclick="goSwap()">VIP</div>
+        <div class="seat" style="bottom:60px; left:40px;" onclick="goSwap()">201</div>
+        <div class="seat" style="bottom:60px; right:40px;" onclick="goSwap()">202</div>
+        <div class="seat" style="bottom:10px; left:140px;" onclick="goSwap()">VIP</div>
 
+      </div>
     </div>
+
   </div>
 
-</div>
+  <script>
+    function goSwap() {
+      window.location.href = "swap.html";
+    }
+  </script>
 
-<script>
-  function goSwap() {
-    window.location.href = "swap.html";
-  }
-</script>
-
+</body>
+</html>
