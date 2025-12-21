@@ -1,158 +1,82 @@
-/* WEBSITE CONTAINER */
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+/* ===============================
+   ARENA NIGHT BACKGROUND
+================================ */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
+
+  background:
+    radial-gradient(circle at center, rgba(0,247,255,0.25), transparent 55%),
+    radial-gradient(circle at top, #3b008f, #120022 55%, #000 100%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.04) 8px,
+      transparent 8px,
+      transparent 16px
+    );
+}
+
+/* ===============================
+   HEADER / BRAND
+================================ */
+.header {
+  padding: 24px 20px;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 12px #ff00ff,
+    0 0 24px #00f7ff;
+}
+
+.slogan {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.slogan span {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  font-style: italic;
+  color: #00f7ff;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
-/* HERO SECTION */
-.hero {
-  padding: 80px 20px;
-}
 
+/* ===============================
+   HERO
+================================ */
 .hero h1 {
-  font-size: 48px;
+  font-size: 56px;
+  font-weight: 900;
   margin-bottom: 10px;
+  text-shadow:
+    0 0 15px #ff00ff,
+    0 0 35px #00f7ff;
 }
 
 .hero p {
-  font-size: 18px;
-  opacity: 0.9;
+  font-size: 20px;
   max-width: 600px;
   margin: 0 auto 30px;
 }
-
-/* FEATURE CARDS */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 60px;
-}
-
-.card {
-  background: rgba(255,255,255,0.12);
-  padding: 25px;
-  border-radius: 20px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card span {
-  font-size: 30px;
-  display: block;
-  margin-bottom: 10px;
-}
-/* STADIUM CONTAINER */
-.stadium-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-}
-
-/* STADIUM BOWL */
-.stadium {
-  position: relative;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #111 40%, #000 70%);
-  box-shadow:
-    0 0 40px #00f7ff,
-    inset 0 0 40px rgba(255,0,255,0.4);
-}
-
-/* CENTER FIELD / COURT */
-.field {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle, #00f7ff, #0066ff);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 25px #00f7ff;
-}
-
-/* SEAT RING */
-.seat {color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0 0 8px rgba(0,0,0,0.9);
-  font-size: 14px;
-  min-width: 44px;
-  min-height: 32px;
-  position: absolute;
-  padding: 10px 14px;
-  background: rgba(0,0,0,0.7);
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  border: 1px solid #ff00ff;
-  box-shadow: 0 0 12px #ff00ff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.seat:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 25px #00f7ff;
-}
-/* SEAT TIERS */
-.seat.courtside {
-  border-color: #ffd700;
-  box-shadow: 0 0 15px #ffd700;
-}
-
-.seat.club {
-  border-color: #00f7ff;
-  box-shadow: 0 0 15px #00f7ff;
-}
-
-.seat.upper {
-  border-color: #ff00ff;
-  box-shadow: 0 0 15px #ff00ff;
-}
-
-/* AVAILABLE SEAT PULSE */
-.seat.available {
-  animation: seatPulse 1.8s infinite;
-}
-
-@keyframes seatPulse {
-  0% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.15); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.8; }
-}
-/* LEGEND */
-.legend {
-  margin: 18px auto 0;
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 6px;
-  box-shadow: 0 0 10px currentColor;
-}
-
-.dot.courtside { background: #ffd700; color: #ffd700; }
-.dot.club { background: #00f7ff; color: #00f7ff; }
-.dot.upper { background: #ff00ff; color: #ff00ff; }
-
