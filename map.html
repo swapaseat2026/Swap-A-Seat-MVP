@@ -50,11 +50,17 @@
 
   </div>
 
-  <script>
-    function goSwap() {
-      window.location.href = "swap.html";
-    }
-  </script>
+ <script>
+  function pickSeat(label) {
+    document.getElementById("picked").innerText = "Picked: " + label;
+
+    // quick fun feedback
+    alert("✅ You picked: " + label);
+
+    // go to swap page
+    window.location.href = "swap.html";
+  }
+</script>
 
 </body>
 </html>
