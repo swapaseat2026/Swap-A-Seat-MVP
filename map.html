@@ -1,8 +1,56 @@
 <!DOCTYPE html>
 <html>
-<body style="background:#111;color:white;text-align:center;">
-  <h2>Choose a Section</h2>
-  <a href="swap.html">Request Swap</a>
+<head>
+  <title>Select Your Section</title>
+
+  <!-- CONNECT STYLE -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .stadium {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 600px;
+      margin: 80px auto;
+    }
+
+    .section {
+      padding: 40px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .section:hover {
+      transform: scale(1.1);
+      background: #00f7ff;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Select a Stadium Section</h2>
+
+  <div class="stadium">
+    <div class="section" onclick="location.href='swap.html'">Section 101</div>
+    <div class="section" onclick="location.href='swap.html'">Section 102</div>
+    <div class="section" onclick="location.href='swap.html'">Section 103</div>
+
+    <div class="section" onclick="location.href='swap.html'">Section 201</div>
+    <div class="section" onclick="location.href='swap.html'">Section 202</div>
+    <div class="section" onclick="location.href='swap.html'">Section 203</div>
+
+    <div class="section" onclick="location.href='swap.html'">VIP</div>
+    <div class="section" onclick="location.href='swap.html'">Club</div>
+    <div class="section" onclick="location.href='swap.html'">Courtside</div>
+  </div>
+
 </body>
 </html>
 
