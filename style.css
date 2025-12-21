@@ -133,4 +133,26 @@
   50% { transform: scale(1.15); opacity: 1; }
   100% { transform: scale(1); opacity: 0.8; }
 }
+/* LEGEND */
+.legend {
+  margin: 18px auto 0;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.dot.courtside { background: #ffd700; color: #ffd700; }
+.dot.club { background: #00f7ff; color: #00f7ff; }
+.dot.upper { background: #ff00ff; color: #ff00ff; }
 
