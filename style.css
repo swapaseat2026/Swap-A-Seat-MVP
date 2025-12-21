@@ -50,4 +50,54 @@
   display: block;
   margin-bottom: 10px;
 }
+/* STADIUM CONTAINER */
+.stadium-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+/* STADIUM BOWL */
+.stadium {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #111 40%, #000 70%);
+  box-shadow:
+    0 0 40px #00f7ff,
+    inset 0 0 40px rgba(255,0,255,0.4);
+}
+
+/* CENTER FIELD / COURT */
+.field {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #00f7ff, #0066ff);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 25px #00f7ff;
+}
+
+/* SEAT RING */
+.seat {
+  position: absolute;
+  padding: 10px 14px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #ff00ff;
+  box-shadow: 0 0 12px #ff00ff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seat:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px #00f7ff;
+}
 
