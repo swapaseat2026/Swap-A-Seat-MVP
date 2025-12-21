@@ -1,16 +1,32 @@
 <body>
 
-  <div class="header">
-    SeatSwap
-    <div class="slogan">Choose Your Section</div>
-  </div>
-
   <div class="container">
 
-    <h2>Select a Stadium Section</h2>
+  <h2>Pick Your Section</h2>
+  <p>Tap a glowing section to request a swap</p>
 
-    <!-- stadium grid stays here -->
+  <div class="stadium-wrapper">
+    <div class="stadium">
 
+      <div class="field"></div>
+
+      <!-- SEATS -->
+      <div class="seat" style="top:10px; left:140px;" onclick="goSwap()">101</div>
+      <div class="seat" style="top:60px; left:40px;" onclick="goSwap()">102</div>
+      <div class="seat" style="top:60px; right:40px;" onclick="goSwap()">103</div>
+
+      <div class="seat" style="bottom:60px; left:40px;" onclick="goSwap()">201</div>
+      <div class="seat" style="bottom:60px; right:40px;" onclick="goSwap()">202</div>
+      <div class="seat" style="bottom:10px; left:140px;" onclick="goSwap()">VIP</div>
+
+    </div>
   </div>
 
-</body>
+</div>
+
+<script>
+  function goSwap() {
+    window.location.href = "swap.html";
+  }
+</script>
+
