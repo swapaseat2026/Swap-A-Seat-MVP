@@ -1,7 +1,69 @@
 <!DOCTYPE html>
 <html>
-<body style="background:#000;color:white;text-align:center;">
-  <h2>Swap Request Sent ✅</h2>
+<head>
+  <title>Swap Request</title>
+
+  <!-- CONNECT STYLE -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .swap-box {
+      max-width: 500px;
+      margin: 80px auto;
+      padding: 30px;
+      border-radius: 25px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .seat {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    .arrow {
+      font-size: 30px;
+      margin: 20px 0;
+    }
+
+    .confirm {
+      margin-top: 30px;
+      padding: 14px 28px;
+      background: #00ff88;
+      color: black;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+    }
+
+    .confirm:hover {
+      background: #00cc6a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Seat Swap Request</h2>
+
+  <div class="swap-box">
+    <div class="seat">Your Seat: Section 201</div>
+
+    <div class="arrow">⬇️</div>
+
+    <div class="seat">Requested Seat: Courtside</div>
+
+    <button class="confirm" onclick="confirmSwap()">Confirm Swap</button>
+  </div>
+
+  <script>
+    function confirmSwap() {
+      alert("🎉 Swap Request Sent!\nWaiting for approval...");
+    }
+  </script>
+
 </body>
 </html>
+
 
