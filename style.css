@@ -102,4 +102,68 @@ body {
 .feature:hover {
   transform: scale(1.08);
 }
+/* ===== STADIUM VISUAL ===== */
+
+.stadium-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.stadium {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, #111 60%, #000);
+  border-radius: 50%;
+  box-shadow: 0 0 60px rgba(0,255,255,0.25);
+}
+
+/* FIELD */
+.field {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #00ff99, #008855);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  color: #002;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SEATS */
+.seat {
+  position: absolute;
+  width: 56px;
+  height: 34px;
+  background: #222;
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seat:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 18px currentColor;
+}
+
+/* SEAT TYPES */
+.cs { color: #ff0066; }
+.cl { color: #00c8ff; }
+.up { color: #ffaa00; }
+.vip {
+  color: #b47cff;
+  background: linear-gradient(135deg, #5b2cff, #b47cff);
+}
 
