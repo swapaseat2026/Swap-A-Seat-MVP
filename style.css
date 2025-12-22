@@ -1,141 +1,16 @@
-/* =====================
-   GLOBAL BACKGROUND
-===================== */
+/* SEATGEEK-STYLE GLOBAL BACKGROUND */
 html, body {
   margin: 0;
   min-height: 100%;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   color: #ffffff;
-  text-align: center;
+
   background:
-    radial-gradient(circle at top, #1a0033 0%, #000000 60%),
-    linear-gradient(135deg, rgba(0,247,255,0.08), rgba(255,0,255,0.08));
+    radial-gradient(1200px 600px at top, #0bbcd6 0%, #0a1a2a 40%, #050b14 100%);
+
   background-attachment: fixed;
-}
-
-/* =====================
-   HEADER
-===================== */
-.header {
-  padding: 20px;
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-.slogan {
-  font-size: 14px;
-  opacity: 0.85;
-}
-
-/* =====================
-   CONTAINER
-===================== */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* =====================
-   STADIUM
-===================== */
-.stadium-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.stadium {
-  position: relative;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #111 40%, #000 70%);
-  box-shadow: 0 0 40px #00f7ff, inset 0 0 40px rgba(255,0,255,0.4);
-}
-
-.field {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle, #00f7ff, #0066ff);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 25px #00f7ff;
-}
-
-/* =====================
-   SEATS
-===================== */
-.seat {
-  position: absolute;
-  min-width: 56px;
-  min-height: 44px;
-  padding: 8px;
-  font-size: 16px;
-  font-weight: 900;
-  color: #fff;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  text-shadow: 0 0 10px #000;
-  transition: transform 0.2s ease;
-}
-
-.seat:hover {
-  transform: scale(1.25);
-}
-
-/* TIERS */
-.seat.courtside { border: 2px solid #ffd700; box-shadow: 0 0 15px #ffd700; }
-.seat.club { border: 2px solid #00f7ff; box-shadow: 0 0 15px #00f7ff; }
-.seat.upper { border: 2px solid #ff00ff; box-shadow: 0 0 15px #ff00ff; }
-
-/* AVAILABLE PULSE */
-.seat.available {
-  animation: pulse 1.8s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.15); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.8; }
-}
-/* SCOREBOARD */
-.scoreboard {
-  margin: 20px auto;
-  padding: 14px 26px;
-  display: inline-block;
-  font-weight: 900;
-  letter-spacing: 1px;
-  border-radius: 30px;
-  background: linear-gradient(90deg, #ff00ff, #00f7ff);
-  color: #000;
-  box-shadow: 0 0 20px #00f7ff;
-}
-/* CROWD ANIMATION */
-.crowd {
-  position: absolute;
-  font-size: 24px;
-  animation: floatUp 4s infinite ease-in-out;
-  opacity: 0.8;
-}
-
-@keyframes pulseGlow {
-  0% { box-shadow: 0 0 20px #00f7ff; }
-  50% { box-shadow: 0 0 35px #ff00ff; }
-  100% { box-shadow: 0 0 20px #00f7ff; }
-}
-
-.cta {
-  animation: pulseGlow 2.5s infinite;
 }
 
