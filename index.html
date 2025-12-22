@@ -11,27 +11,69 @@
 <body>
 
   <!-- HERO (FULL WIDTH) -->
-  <div class="hero">
-    <h1>Swap Seats. Instantly.</h1>
+ <div class="hero">
 
-    <p class="tagline">
-      Found better seats? Want to sit closer?<br>
-      Trade seats inside the stadium — fast, fun, and easy.
-    </p>
+  <h1 class="hero-title">
+    Buy. Swap. Sit Closer.
+  </h1>
 
-    <a href="map.html" class="cta">
-      🏟️ Enter Stadium
-    </a>
-  </div>
+  <p class="hero-sub">
+    The easiest way for fans to trade seats and move closer —
+    live inside the stadium.
+  </p>
+
+  <a href="map.html" class="cta-primary">
+    Enter Stadium
+  </a>
+
+</div>
 
   <!-- FEATURES -->
-  <div class="container">
-    <div class="features">
-      <div class="feature">📍 Live Stadium Map</div>
-      <div class="feature">⚡ Instant Swaps</div>
-      <div class="feature">❤️ Sit Together</div>
-    </div>
+ <div class="container">
+  <div class="features">
+    <div class="feature">🏟️ Live Stadium Map</div>
+    <div class="feature">⚡ Instant Seat Swaps</div>
+    <div class="feature">❤️ Sit With Your People</div>
   </div>
+</div>
 
 </body>
 </html>
+/* HERO – SEATGEEK INSPIRED */
+.hero {
+  padding: 110px 20px 90px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 18px;
+}
+
+.hero-sub {
+  font-size: 20px;
+  opacity: 0.9;
+  max-width: 640px;
+  margin: 0 auto 40px;
+}
+
+/* PRIMARY CTA */
+.cta-primary {
+  display: inline-block;
+  padding: 18px 44px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #00131a;
+  background: #0bbcd6;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(11,188,214,0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(11,188,214,0.6);
+}
