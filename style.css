@@ -129,8 +129,13 @@ body {
   opacity: 0.8;
 }
 
-@keyframes floatUp {
-  0% { transform: translateY(0); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: translateY(-60px); opacity: 0; }
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 20px #00f7ff; }
+  50% { box-shadow: 0 0 35px #ff00ff; }
+  100% { box-shadow: 0 0 20px #00f7ff; }
 }
+
+.cta {
+  animation: pulseGlow 2.5s infinite;
+}
+
