@@ -1,169 +1,67 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* GLOBAL BACKGROUND – STADIUM ENERGY */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background:
-    radial-gradient(circle at top, #1a0033 0%, #000 70%),
-    linear-gradient(135deg, rgba(0,255,255,0.1), rgba(255,0,255,0.1));
-  color: #fff;
-  overflow-x: hidden;
-}
-
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  padding: 40px 20px;
-}
-
-.hero-content h1 {
-  font-size: 64px;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  font-size: 20px;
-  opacity: 0.9;
-  margin-bottom: 40px;
-}
-
-/* CTA BUTTON */
-.cta {
-  padding: 18px 50px;
-  font-size: 18px;
-  font-weight: bold;
-  background: #00e5ff;
-  color: #00131a;
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 15px 40px rgba(0,229,255,0.5);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cta:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 25px 60px rgba(0,229,255,0.8);
-}
-
-/* CROWD ANIMATION */
-.crowd {
-  position: absolute;
-  bottom: 30px;
-  display: flex;
-  gap: 20px;
-  font-size: 30px;
-}
-
-.crowd span {
-  animation: bounce 1.5s infinite alternate;
-}
-
-.crowd span:nth-child(2) { animation-delay: 0.2s; }
-.crowd span:nth-child(3) { animation-delay: 0.4s; }
-.crowd span:nth-child(4) { animation-delay: 0.6s; }
-.crowd span:nth-child(5) { animation-delay: 0.8s; }
-
-@keyframes bounce {
-  from { transform: translateY(0); }
-  to { transform: translateY(-15px); }
-}
-
-/* FEATURES */
-.features {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 60px 20px;
-  flex-wrap: wrap;
-}
-
-.feature {
-  background: rgba(255,255,255,0.08);
-  padding: 30px 40px;
-  border-radius: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  transition: transform 0.2s ease;
-}
-
-.feature:hover {
-  transform: scale(1.08);
-}
-/* ===== STADIUM VISUAL ===== */
+/* ====== STADIUM VISUAL FIXED ====== */
 
 .stadium-wrapper {
   display: flex;
   justify-content: center;
-  margin: 60px 0;
+  align-items: center;
+  min-height: 65vh;
+  padding-top: 40px;
 }
 
 .stadium {
   position: relative;
   width: 340px;
   height: 340px;
-  background: radial-gradient(circle, #111 60%, #000);
   border-radius: 50%;
-  box-shadow: 0 0 60px rgba(0,255,255,0.25);
+  background: radial-gradient(circle, #050008 20%, #000 80%);
+  box-shadow:
+    0 0 25px #FF00C8,
+    0 0 50px #7B2FF7,
+    0 0 80px #39FF14;
+  animation: stadiumPulse 3s infinite alternate;
+}
+
+@keyframes stadiumPulse {
+  from { box-shadow: 0 0 25px #39FF14; }
+  to   { box-shadow: 0 0 80px #FF00C8; }
 }
 
 /* FIELD */
 .field {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle, #00ff99, #008855);
+  top: 50%; left: 50%;
+  width: 140px; height: 140px;
+  background: radial-gradient(circle, #39FF14, #7B2FF7);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  color: #002;
+  display: flex; justify-content: center; align-items: center;
+  color: #050008;
   font-weight: 900;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 24px;
+  text-shadow:
+    0 0 15px #39FF14,
+    0 0 30px #FF00C8;
 }
 
 /* SEATS */
 .seat {
   position: absolute;
-  width: 56px;
-  height: 34px;
-  background: #222;
-  color: white;
-  font-weight: 800;
-  font-size: 14px;
+  width: 60px; height: 38px;
   border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #39FF14;
+  color: #050008;
+  font-weight: 900;
+  display: flex; justify-content: center; align-items: center;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-shadow: 0 0 8px #050008;
+  box-shadow:
+    0 0 15px #39FF14,
+    0 0 25px #FF00C8;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
-
 .seat:hover {
   transform: scale(1.25);
-  box-shadow: 0 0 18px currentColor;
+  box-shadow:
+    0 0 30px #39FF14,
+    0 0 50px #FF00C8;
 }
-
-/* SEAT TYPES */
-.cs { color: #ff0066; }
-.cl { color: #00c8ff; }
-.up { color: #ffaa00; }
-.vip {
-  color: #b47cff;
-  background: linear-gradient(135deg, #5b2cff, #b47cff);
-}
-
