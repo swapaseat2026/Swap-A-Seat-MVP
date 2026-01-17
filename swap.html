@@ -21,12 +21,17 @@
 
 <script>
   const seat = localStorage.getItem('selectedSeat');
-  document.getElementById('selectedSeatText').innerText =
-    seat ? `Your seat: ${seat}` : 'No seat selected';
+ document.getElementById('selectedSeatText').innerText =
+  seat ? Your seat: ${seat} : No seat selected;
 
   function goBack() {
     window.location.href = 'stadium.html';
   }
+  document.querySelectorAll('.swap-card').forEach(card => {
+  card.addEventListener('click', () => {
+    alert('Swap request sent for ' + card.innerText);
+  });
+});
 </script>
 
 </body>
