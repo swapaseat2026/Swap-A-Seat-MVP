@@ -173,3 +173,44 @@ body {
   color: #050008;
   box-shadow: 0 0 30px #39FF14;
 }
+/* ===== SWAP SCREEN ===== */
+
+.swap-options {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.swap-card {
+  width: 220px;
+  padding: 22px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #39FF14, #FF00C8, #7B2FF7);
+  color: #050008;
+  font-weight: 900;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+
+  box-shadow:
+    0 0 20px #39FF14,
+    0 0 40px #FF00C8;
+
+  animation: pulse 2.5s infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.swap-card:hover {
+  transform: scale(1.15);
+  box-shadow:
+    0 0 40px #39FF14,
+    0 0 70px #FF00C8;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 20px #39FF14; }
+  50% { box-shadow: 0 0 60px #FF00C8; }
+  100% { box-shadow: 0 0 20px #39FF14; }
+}
