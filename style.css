@@ -143,3 +143,25 @@ body {
     0 0 50px #7B2FF7;
   transform: scale(1.3);
 }
+/* CONFIRM BUTTON */
+#confirmSeat {
+  margin-top: 30px;
+  padding: 16px 44px;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #39FF14;
+  color: #050008;
+  box-shadow:
+    0 0 20px #39FF14,
+    0 0 40px #FF00C8;
+  opacity: 0.4;
+  transition: 0.2s;
+}
+
+#confirmSeat.enabled {
+  opacity: 1;
+  transform: scale(1.05);
+}
