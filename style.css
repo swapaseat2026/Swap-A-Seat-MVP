@@ -238,3 +238,77 @@ button {
   border: none;
   cursor: pointer;
 }
+/* ===== STATUS PAGE ===== */
+
+.status-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top, #7B2FF7, #050008 60%),
+    linear-gradient(90deg, #39FF14, transparent 60%),
+    linear-gradient(180deg, #FF00C8, transparent 60%);
+}
+
+.status-card {
+  width: min(420px, 90vw);
+  padding: 40px 32px;
+  border-radius: 26px;
+  text-align: center;
+  background: rgba(0,0,0,.55);
+  box-shadow:
+    0 0 40px rgba(255,0,200,.35),
+    0 0 80px rgba(57,255,20,.25);
+}
+
+.status-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.status-card h1 {
+  font-size: 36px;
+  margin-bottom: 14px;
+  color: #39FF14;
+  text-shadow: 0 0 18px #39FF14;
+}
+
+.status-text {
+  font-size: 18px;
+  opacity: .9;
+  margin-bottom: 28px;
+}
+
+.status-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  margin-bottom: 32px;
+  opacity: .85;
+}
+
+.status-meta span {
+  background: rgba(255,255,255,.08);
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+/* Button */
+.status-card button {
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 900;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #39FF14, #FF00C8);
+  color: #050008;
+  box-shadow: 0 0 20px #39FF14;
+}
+
+.status-card button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px #FF00C8;
+}
