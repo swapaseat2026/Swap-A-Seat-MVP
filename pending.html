@@ -31,11 +31,8 @@
   setTimeout(() => {
     const accepted = Math.random() > 0.4; // 60% accept rate
 
-    if (accepted) {
-      window.location.href = 'success.html';
-    } else {
-      window.location.href = 'declined.html';
-    }
+   localStorage.setItem('swapResult', accepted ? 'Accepted' : 'Declined');
+window.location.href = 'status.html';
   }, 3000); // 3 seconds wait
 
   function goHome() {
