@@ -8,7 +8,9 @@
 
 <body>
 
-  <div class="stadium-page">
+  <div class="scoreboard">
+  Q4 • 1:24 • HOME 102 — AWAY 99
+</div>
 
     <h1>Choose Your Seat</h1>
 
@@ -35,12 +37,22 @@
   </div>
 <script>
   const seats = document.querySelectorAll('.seat');
+  const confirmBtn = document.getElementById('confirmSeat');
+  let selectedSeat = null;
 
   seats.forEach(seat => {
     seat.addEventListener('click', () => {
       seats.forEach(s => s.classList.remove('selected'));
       seat.classList.add('selected');
+      selectedSeat = seat.innerText;
+
+      confirmBtn.disabled = false;
+      confirmBtn.classList.add('enabled');
     });
+  });
+
+  confirmBtn.addEventListener('click', () => {
+    alert('Seat confirmed: ' + selectedSeat);
   });
 </script>
 
