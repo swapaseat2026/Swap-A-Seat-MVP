@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SeatSwap – Pending</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="stadium-page">
+
+  <h1>Swap Request Sent</h1>
+
+  <p id="pendingText">
+    Waiting for another fan to respond...
+  </p>
+
+  <div class="loading">
+    ⏳ ⏳ ⏳
+  </div>
+
+  <button onclick="goHome()">Back to Stadium</button>
+
+  <script>
+    const seat = localStorage.getItem('selectedSeat');
+    const target = localStorage.getItem('swapTarget');
+
+    document.getElementById('pendingText').innerText =
+      `You requested to swap from ${seat} to ${target}.`;
+
+    function goHome() {
+      window.location.href = 'stadium.html';
+    }
+  </script>
+
+</body>
+</html>
 
