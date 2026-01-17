@@ -312,3 +312,21 @@ button {
   transform: scale(1.08);
   box-shadow: 0 0 40px #FF00C8;
 }
+/* ===== SWAP PAGE POLISH ===== */
+.swap-options {
+  margin-top: 30px;
+}
+
+.swap-card {
+  position: relative;
+}
+
+.swap-card::after {
+  content: "Tap to Request";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  opacity: 0.8;
+}
