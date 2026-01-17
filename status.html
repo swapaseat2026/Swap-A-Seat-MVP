@@ -29,16 +29,25 @@
 </div>
 
 <script>
-  document.getElementById('currentSeat').innerText =
-    localStorage.getItem('selectedSeat') || 'N/A';
+  const currentSeat = localStorage.getItem('selectedSeat');
+  const targetSeat = localStorage.getItem('swapTarget');
 
-  document.getElementById('targetSeat').innerText =
-    localStorage.getItem('swapTarget') || 'N/A';
+  document.getElementById('currentSeat').innerText = currentSeat || 'N/A';
+  document.getElementById('targetSeat').innerText = targetSeat || 'N/A';
 
-  function goBack() {
-    window.location.href = 'stadium.html';
-  }
+  // Auto-resolve after delay (simulate fan response)
+  setTimeout(() => {
+    const accepted = Math.random() > 0.4; // 60% accept rate
+
+    localStorage.setItem(
+      'swapResult',
+      accepted ? 'Accepted' : 'Declined'
+    );
+
+    window.location.href = 'result.html';
+  }, 3000); // 3 seconds
 </script>
+
 
 </body>
 </html>
