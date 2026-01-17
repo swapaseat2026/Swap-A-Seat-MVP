@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Swap Sent</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>SeatSwap – Success</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="stadium-page">
 
-  <h1>🔥 Swap Request Sent</h1>
-  <p id="summary"></p>
+  <h1>🎉 Swap Confirmed!</h1>
 
-  <button onclick="goHome()">Back to Stadium</button>
+  <p id="successText"></p>
+
+  <button onclick="goHome()">Return to Stadium</button>
 
   <script>
     const seat = localStorage.getItem('selectedSeat');
-    const swap = localStorage.getItem('swapTarget');
+    const target = localStorage.getItem('swapTarget');
 
-    document.getElementById('summary').innerText =
-      `You requested a swap from ${seat} to ${swap}`;
+    document.getElementById('successText').innerText =
+      `Your seat has been swapped from ${seat} to ${target}. Enjoy the game!`;
 
     function goHome() {
       window.location.href = 'stadium.html';
