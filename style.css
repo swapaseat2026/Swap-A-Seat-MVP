@@ -1,52 +1,78 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial Black, Arial, sans-serif;
+/* ===== STADIUM PAGE ===== */
+.stadium-page {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top, #7B2FF7, #050008 60%),
-    linear-gradient(90deg, #39FF14, transparent 60%),
-    linear-gradient(180deg, #FF00C8, transparent 60%);
-  background-blend-mode: screen;
-  color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.hero {
+  gap: 40px;
   text-align: center;
 }
 
-.hero h1 {
-  font-size: 64px;
+.stadium-page h1 {
+  font-size: 42px;
   color: #39FF14;
   text-shadow: 0 0 20px #39FF14, 0 0 40px #FF00C8;
 }
 
-.hero p {
-  font-size: 22px;
-  color: #FF00C8;
-  margin: 20px 0 40px;
+/* STADIUM */
+.stadium {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #000, #050008);
+  box-shadow:
+    0 0 30px #7B2FF7,
+    0 0 60px #FF00C8;
+  animation: glow 3s infinite alternate;
 }
 
-.cta {
-  font-size: 22px;
+@keyframes glow {
+  from { box-shadow: 0 0 30px #7B2FF7; }
+  to   { box-shadow: 0 0 80px #FF00C8; }
+}
+
+/* FIELD */
+.field {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #39FF14, #7B2FF7);
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 900;
-  padding: 18px 50px;
+  color: #050008;
+  text-shadow: 0 0 15px #39FF14;
+}
+
+/* SEATS */
+.seat {
+  position: absolute;
+  width: 64px;
+  height: 40px;
   border-radius: 999px;
-  border: none;
-  cursor: pointer;
   background: #39FF14;
   color: #050008;
-  box-shadow: 0 0 25px #39FF14, 0 0 40px #FF00C8;
-  transition: transform 0.2s ease;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow:
+    0 0 15px #39FF14,
+    0 0 30px #FF00C8;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.cta:hover {
-  transform: scale(1.1);
+.seat:hover {
+  transform: scale(1.25);
+  box-shadow:
+    0 0 30px #39FF14,
+    0 0 50px #FF00C8;
 }
