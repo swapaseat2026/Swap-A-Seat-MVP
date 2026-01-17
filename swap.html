@@ -29,7 +29,8 @@
   }
   document.querySelectorAll('.swap-card').forEach(card => {
   card.addEventListener('click', () => {
-    alert('Swap request sent for ' + card.innerText);
+  localStorage.setItem('swapTarget', card.innerText);
+window.location.href = 'success.html';
   });
 });
 </script>
