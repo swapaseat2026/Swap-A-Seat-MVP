@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SeatSwap – Result</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="stadium-page">
+
+  <h1 id="resultTitle">Processing...</h1>
+  <p id="resultMessage"></p>
+
+  <button onclick="goBack()">Back to Stadium</button>
+
+  <script>
+    const result = localStorage.getItem('swapResult');
+    const seat = localStorage.getItem('selectedSeat');
+    const target = localStorage.getItem('swapTarget');
+
+    const title = document.getElementById('resultTitle');
+    const msg = document.getElementById('resultMessage');
+
+    if (result === 'Accepted') {
+      title.innerText = '🎉 Swap Accepted!';
+      msg.innerText = `You successfully swapped ${seat} → ${target}`;
+    } else {
+      title.innerText = '❌ Swap Declined';
+      msg.innerText = `Your request to ${target} was declined. Try another section.`;
+    }
+
+    function goBack() {
+      window.location.href = 'stadium.html';
+    }
+  </script>
+
+</body>
+</html>
