@@ -31,7 +31,7 @@ document.getElementById('selectedSeatText').innerText =
   document.querySelectorAll('.swap-card').forEach(card => {
   card.addEventListener('click', () => {
   localStorage.setItem('swapTarget', card.innerText);
-window.location.href = 'success.html';
+  window.location.href = 'pending.html';
   });
 });
 </script>
