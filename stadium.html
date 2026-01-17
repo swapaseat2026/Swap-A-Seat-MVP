@@ -65,24 +65,29 @@
 
   </div>
 <script>
- const seats = document.querySelectorAll('.seat');
-let selectedSeat = null;
+  const sections = document.querySelectorAll('.section');
+  const confirmBtn = document.getElementById('confirmSeat');
+  const pickedLine = document.getElementById('pickedLine');
 
-seats.forEach(seat => {
-  seat.addEventListener('click', () => {
-    seats.forEach(s => s.classList.remove('selected'));
-    seat.classList.add('selected');
-    selectedSeat = seat.getAttribute('data-seat');
+  let selected = null;
 
-    confirmBtn.disabled = false;
-    confirmBtn.classList.add('enabled');
+  sections.forEach(btn => {
+    btn.addEventListener('click', () => {
+      sections.forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+
+      selected = btn.getAttribute('data-section');
+      pickedLine.textContent = "Picked: " + selected;
+
+      confirmBtn.disabled = false;
+      confirmBtn.classList.add('enabled');
     });
   });
 
- confirmBtn.addEventListener('click', () => {
-  localStorage.setItem('selectedSeat', selectedSeat);
-  window.location.href = 'swap.html';
-});
+  confirmBtn.addEventListener('click', () => {
+    localStorage.setItem('selectedSeat', selected);  // re-using your existing flow
+    window.location.href = 'swap.html';
+  });
 </script>
 
 </body>
