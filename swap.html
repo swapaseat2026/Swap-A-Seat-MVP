@@ -20,9 +20,10 @@
   <button onclick="goBack()">Back to Stadium</button>
 
 <script>
-  const seat = localStorage.getItem('selectedSeat');
- document.getElementById('selectedSeatText').innerText =
-  seat ? Your seat: ${seat} : No seat selected;
+ const seat = localStorage.getItem('selectedSeat');
+
+document.getElementById('selectedSeatText').innerText =
+  seat ? `Your seat: ${seat}` : 'No seat selected';
 
   function goBack() {
     window.location.href = 'stadium.html';
