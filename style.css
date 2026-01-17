@@ -134,3 +134,12 @@ body {
     0 0 30px #39FF14,
     0 0 50px #FF00C8;
 }
+/* SEAT SELECTED STATE */
+.seat.selected {
+  background: #FF00C8;
+  color: white;
+  box-shadow:
+    0 0 25px #FF00C8,
+    0 0 50px #7B2FF7;
+  transform: scale(1.3);
+}
