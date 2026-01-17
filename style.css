@@ -160,8 +160,16 @@ body {
   opacity: 0.4;
   transition: 0.2s;
 }
-
 #confirmSeat.enabled {
   opacity: 1;
   transform: scale(1.05);
+}
+/* SCOREBOARD */
+.scoreboard {
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #39FF14, #FF00C8);
+  color: #050008;
+  box-shadow: 0 0 30px #39FF14;
 }
