@@ -6,36 +6,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="status-page">
+<div class="status-page">
 
-  <h1>Swap Status</h1>
+  <div class="status-card pending">
+    <div class="status-icon">⏳</div>
 
-  <div class="status-card">
-    <p id="statusSeat"></p>
-    <p id="statusTarget"></p>
-    <p id="statusResult"></p>
+    <h1>Swap Pending</h1>
+
+    <p class="status-text">
+      Your swap request has been sent.<br />
+      Waiting for the other fan to respond.
+    </p>
+
+    <div class="status-meta">
+      <span>Current Seat: <b id="currentSeat">—</b></span>
+      <span>Requested: <b id="targetSeat">—</b></span>
+    </div>
+
+    <button onclick="goBack()">Back to Stadium</button>
   </div>
 
-  <button onclick="goHome()">Back to Stadium</button>
+</div>
 
-  <script>
-    const seat = localStorage.getItem('selectedSeat');
-    const target = localStorage.getItem('swapTarget');
-    const result = localStorage.getItem('swapResult');
+<script>
+  document.getElementById('currentSeat').innerText =
+    localStorage.getItem('selectedSeat') || 'N/A';
 
-    document.getElementById('statusSeat').innerText =
-      `Your Seat: ${seat || '—'}`;
+  document.getElementById('targetSeat').innerText =
+    localStorage.getItem('swapTarget') || 'N/A';
 
-    document.getElementById('statusTarget').innerText =
-      `Requested: ${target || '—'}`;
-
-    document.getElementById('statusResult').innerText =
-      `Status: ${result || 'Pending'}`;
-
-    function goHome() {
-      window.location.href = 'stadium.html';
-    }
-  </script>
+  function goBack() {
+    window.location.href = 'stadium.html';
+  }
+</script>
 
 </body>
 </html>
