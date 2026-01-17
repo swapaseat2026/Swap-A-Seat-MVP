@@ -62,9 +62,10 @@
     });
   });
 
-  confirmBtn.addEventListener('click', () => {
-    alert('Seat confirmed: ' + selectedSeat);
-  });
+ confirmBtn.addEventListener('click', () => {
+  localStorage.setItem('selectedSeat', selectedSeat);
+  window.location.href = 'swap.html';
+});
 </script>
 
 </body>
