@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SeatSwap – Swap</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
+
+  <h1>Swap Your Seat</h1>
+  <p id="selectedSeatText"></p>
+
+  <div class="swap-options">
+    <div class="swap-card">Swap to Section 102</div>
+    <div class="swap-card">Swap to Section 201</div>
+    <div class="swap-card">Swap to VIP</div>
+  </div>
+
+  <button onclick="goBack()">Back to Stadium</button>
+
+<script>
+  const seat = localStorage.getItem('selectedSeat');
+  document.getElementById('selectedSeatText').innerText =
+    seat ? `Your seat: ${seat}` : 'No seat selected';
+
+  function goBack() {
+    window.location.href = 'stadium.html';
+  }
+</script>
+
+</body>
+</html>
