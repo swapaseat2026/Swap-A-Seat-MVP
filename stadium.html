@@ -65,18 +65,17 @@
 
   </div>
 <script>
-  const seats = document.querySelectorAll('.seat');
-  const confirmBtn = document.getElementById('confirmSeat');
-  let selectedSeat = null;
+ const seats = document.querySelectorAll('.seat');
+let selectedSeat = null;
 
-  seats.forEach(seat => {
-    seat.addEventListener('click', () => {
-      seats.forEach(s => s.classList.remove('selected'));
-      seat.classList.add('selected');
-      selectedSeat = seat.innerText;
+seats.forEach(seat => {
+  seat.addEventListener('click', () => {
+    seats.forEach(s => s.classList.remove('selected'));
+    seat.classList.add('selected');
+    selectedSeat = seat.getAttribute('data-seat');
 
-      confirmBtn.disabled = false;
-      confirmBtn.classList.add('enabled');
+    confirmBtn.disabled = false;
+    confirmBtn.classList.add('enabled');
     });
   });
 
