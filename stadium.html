@@ -24,37 +24,44 @@
 
   <h1>Choose Your Seat</h1>
 
-  <!-- STADIUM -->
- <div class="stadium">
-  <!-- FIELD -->
-  <div class="field">FIELD</div>
+<!-- SEATGEEK-STYLE STADIUM MAP -->
+<div class="sg-map">
 
-  <!-- ROW A -->
-  <div class="row">
-    <div class="seat" data-seat="A1">A1</div>
-    <div class="seat" data-seat="A2">A2</div>
-    <div class="seat" data-seat="A3">A3</div>
-    <div class="seat" data-seat="A4">A4</div>
-    <div class="seat" data-seat="A5">A5</div>
-  </div>
+  <!-- TOP UPPER RING -->
+  <button class="sg sec t1" data-section="Upper 301">301</button>
+  <button class="sg sec t2" data-section="Upper 302">302</button>
+  <button class="sg sec t3" data-section="Upper 303">303</button>
+  <button class="sg sec t4" data-section="Upper 304">304</button>
+  <button class="sg sec t5" data-section="Upper 305">305</button>
 
-  <!-- ROW B -->
-  <div class="row">
-    <div class="seat" data-seat="B1">B1</div>
-    <div class="seat" data-seat="B2">B2</div>
-    <div class="seat" data-seat="B3">B3</div>
-    <div class="seat" data-seat="B4">B4</div>
-    <div class="seat" data-seat="B5">B5</div>
-  </div>
+  <!-- LEFT LOWER -->
+  <button class="sg sec l1" data-section="Lower 101">101</button>
+  <button class="sg sec l2" data-section="Lower 102">102</button>
+  <button class="sg sec l3" data-section="Lower 103">103</button>
 
-  <!-- ROW C -->
-  <div class="row">
-    <div class="seat" data-seat="C1">C1</div>
-    <div class="seat" data-seat="C2">C2</div>
-    <div class="seat" data-seat="C3">C3</div>
-    <div class="seat" data-seat="C4">C4</div>
-    <div class="seat" data-seat="C5">C5</div>
+  <!-- RIGHT LOWER -->
+  <button class="sg sec r1" data-section="Lower 104">104</button>
+  <button class="sg sec r2" data-section="Lower 105">105</button>
+  <button class="sg sec r3" data-section="Lower 106">106</button>
+
+  <!-- BOTTOM -->
+  <button class="sg sec b1" data-section="Lower 201">201</button>
+  <button class="sg sec b2" data-section="Lower 202">202</button>
+  <button class="sg sec vip" data-section="VIP / Club">VIP</button>
+
+  <!-- CENTER FIELD -->
+  <div class="sg field">
+    <div class="sg field-title">FIELD</div>
+    <div class="sg field-grid">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
   </div>
+</div>
+
+<p id="pickedLine" class="picked-line">Picked: none</p>
+
 
 </div>
 
