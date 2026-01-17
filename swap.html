@@ -2,39 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SeatSwap – Swap</title>
+  <title>SeatSwap – Choose Swap</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="stadium-page">
+
+  <div class="scoreboard">
+    Swap Request
+  </div>
 
   <h1>Swap Your Seat</h1>
-  <p id="selectedSeatText"></p>
 
+  <p id="selectedSeatText" style="font-size:20px; opacity:0.9;"></p>
+
+  <!-- SWAP OPTIONS -->
   <div class="swap-options">
+
     <div class="swap-card">Swap to Section 102</div>
     <div class="swap-card">Swap to Section 201</div>
     <div class="swap-card">Swap to VIP</div>
+
   </div>
 
-  <button onclick="goBack()">Back to Stadium</button>
+  <!-- STATUS NOTE -->
+  <p style="opacity:0.7; margin-top:10px;">
+    Your request will be sent to another fan for approval.
+  </p>
+
+  <!-- ACTION BUTTONS -->
+  <div style="display:flex; gap:20px; margin-top:30px;">
+    <button onclick="goBack()">Back</button>
+  </div>
 
 <script>
- const seat = localStorage.getItem('selectedSeat');
+  // Show selected seat
+  const seat = localStorage.getItem('selectedSeat');
+  document.getElementById('selectedSeatText').innerText =
+    seat ? `Your current seat: ${seat}` : 'No seat selected';
 
-document.getElementById('selectedSeatText').innerText =
-  seat ? `Your seat: ${seat}` : 'No seat selected';
+  // Handle swap selection
+  document.querySelectorAll('.swap-card').forEach(card => {
+    card.addEventListener('click', () => {
+      localStorage.setItem('swapTarget', card.innerText);
+      window.location.href = 'status.html';
+    });
+  });
 
   function goBack() {
     window.location.href = 'stadium.html';
   }
-  document.querySelectorAll('.swap-card').forEach(card => {
-  card.addEventListener('click', () => {
-  localStorage.setItem('swapTarget', card.innerText);
-  window.location.href = 'pending.html';
-  });
-});
 </script>
 
 </body>
 </html>
+
