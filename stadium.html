@@ -1,100 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>SeatSwap – Stadium</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<title>SeatSwap – Stadium</title>
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial Black, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg,#39FF14,#FF00C8,#7B2FF7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #050008;
+}
+
+/* CONTAINER */
+.stadium-wrapper {
+  background: #f2f5f8;
+  padding: 24px;
+  border-radius: 20px;
+  width: 900px;
+  max-width: 95vw;
+  box-shadow: 0 30px 80px rgba(0,0,0,.35);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* STADIUM MAP */
+.stadium-map {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: #dfe6ee;
+  border-radius: 18px;
+}
+
+/* FIELD */
+.field {
+  position: absolute;
+  top: 22%;
+  left: 30%;
+  width: 40%;
+  height: 56%;
+  background: #a7d88c;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+/* SECTIONS */
+.section {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 90px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.section:hover {
+  transform: scale(1.06);
+}
+
+.section.selected {
+  background: linear-gradient(135deg,#39FF14,#FF00C8);
+  color: #050008;
+}
+
+/* TOP */
+.t1 { top: 5%; left: 25%; }
+.t2 { top: 5%; left: 40%; }
+.t3 { top: 5%; left: 55%; }
+
+/* LEFT */
+.l1 { top: 28%; left: 5%; }
+.l2 { top: 45%; left: 5%; }
+.l3 { top: 62%; left: 5%; }
+
+/* RIGHT */
+.r1 { top: 28%; right: 5%; }
+.r2 { top: 45%; right: 5%; }
+.r3 { top: 62%; right: 5%; }
+
+/* BOTTOM */
+.b1 { bottom: 5%; left: 35%; }
+.b2 { bottom: 5%; left: 50%; }
+.vip { bottom: 5%; left: 65%; background:#ffe066; }
+
+/* CONFIRM */
+button {
+  margin: 24px auto 0;
+  display: block;
+  padding: 16px 44px;
+  font-size: 18px;
+  font-weight: 900;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #39FF14;
+  opacity: .4;
+}
+
+button.enabled {
+  opacity: 1;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- SCOREBOARD -->
-  <div class="scoreboard">
-    Q4 • 1:24 • HOME 102 — AWAY 99
+<div class="stadium-wrapper">
+  <h1>Choose Your Section</h1>
+
+  <div class="stadium-map">
+    <div class="field">FIELD</div>
+
+    <div class="section t1">101</div>
+    <div class="section t2">102</div>
+    <div class="section t3">103</div>
+
+    <div class="section l1">201</div>
+    <div class="section l2">202</div>
+    <div class="section l3">203</div>
+
+    <div class="section r1">301</div>
+    <div class="section r2">302</div>
+    <div class="section r3">303</div>
+
+    <div class="section b1">401</div>
+    <div class="section b2">402</div>
+    <div class="section vip">VIP</div>
   </div>
 
-  <!-- CROWD -->
-  <div class="crowd">
-    <span>🔥</span>
-    <span>👏</span>
-    <span>🎉</span>
-    <span>🏀</span>
-    <span>⚽</span>
-  </div>
-
-  <h1>Choose Your Seat</h1>
-
-<!-- SEATGEEK-STYLE STADIUM MAP -->
-<div class="sg-map">
-
-  <!-- TOP UPPER RING -->
-  <button class="sg sec t1" data-section="Upper 301">301</button>
-  <button class="sg sec t2" data-section="Upper 302">302</button>
-  <button class="sg sec t3" data-section="Upper 303">303</button>
-  <button class="sg sec t4" data-section="Upper 304">304</button>
-  <button class="sg sec t5" data-section="Upper 305">305</button>
-
-  <!-- LEFT LOWER -->
-  <button class="sg sec l1" data-section="Lower 101">101</button>
-  <button class="sg sec l2" data-section="Lower 102">102</button>
-  <button class="sg sec l3" data-section="Lower 103">103</button>
-
-  <!-- RIGHT LOWER -->
-  <button class="sg sec r1" data-section="Lower 104">104</button>
-  <button class="sg sec r2" data-section="Lower 105">105</button>
-  <button class="sg sec r3" data-section="Lower 106">106</button>
-
-  <!-- BOTTOM -->
-  <button class="sg sec b1" data-section="Lower 201">201</button>
-  <button class="sg sec b2" data-section="Lower 202">202</button>
-  <button class="sg sec vip" data-section="VIP / Club">VIP</button>
-
-  <!-- CENTER FIELD -->
-  <div class="sg field">
-    <div class="sg field-title">FIELD</div>
-    <div class="sg field-grid">
-      <span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
-  </div>
+  <button id="confirm">Confirm Section</button>
 </div>
 
-<p id="pickedLine" class="picked-line">Picked: none</p>
-
-
-</div>
-
-  <!-- CONFIRM BUTTON -->
-  <button id="confirmSeat" disabled>
-    Confirm Seat
-  </button>
-
-  </div>
 <script>
-  const sections = document.querySelectorAll('.section');
-  const confirmBtn = document.getElementById('confirmSeat');
-  const pickedLine = document.getElementById('pickedLine');
+const sections = document.querySelectorAll('.section');
+const btn = document.getElementById('confirm');
+let selected = null;
 
-  let selected = null;
+sections.forEach(sec => {
+  sec.onclick = () => {
+    sections.forEach(s => s.classList.remove('selected'));
+    sec.classList.add('selected');
+    selected = sec.innerText;
+    btn.classList.add('enabled');
+  };
+});
 
-  sections.forEach(btn => {
-    btn.addEventListener('click', () => {
-      sections.forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-
-      selected = btn.getAttribute('data-section');
-      pickedLine.textContent = "Picked: " + selected;
-
-      confirmBtn.disabled = false;
-      confirmBtn.classList.add('enabled');
-    });
-  });
-
-  confirmBtn.addEventListener('click', () => {
-    localStorage.setItem('selectedSeat', selected);  // re-using your existing flow
-    window.location.href = 'swap.html';
-  });
+btn.onclick = () => {
+  if (!selected) return;
+  localStorage.setItem('selectedSection', selected);
+  window.location.href = 'swap.html';
+};
 </script>
 
 </body>
