@@ -20,17 +20,28 @@
 
   <button onclick="goHome()">Back to Stadium</button>
 
-  <script>
-    const seat = localStorage.getItem('selectedSeat');
-    const target = localStorage.getItem('swapTarget');
+<script>
+  const seat = localStorage.getItem('selectedSeat');
+  const target = localStorage.getItem('swapTarget');
 
-    document.getElementById('pendingText').innerText =
-      `You requested to swap from ${seat} to ${target}.`;
+  document.getElementById('pendingText').innerText =
+    `You requested to swap from ${seat} to ${target}.`;
 
-    function goHome() {
-      window.location.href = 'stadium.html';
+  // Simulate waiting for another fan
+  setTimeout(() => {
+    const accepted = Math.random() > 0.4; // 60% accept rate
+
+    if (accepted) {
+      window.location.href = 'success.html';
+    } else {
+      window.location.href = 'declined.html';
     }
-  </script>
+  }, 3000); // 3 seconds wait
+
+  function goHome() {
+    window.location.href = 'stadium.html';
+  }
+</script>
 
 </body>
 </html>
