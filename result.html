@@ -6,27 +6,44 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="stadium-page">
+<body class="result-page">
 
-  <h1 id="resultTitle">Processing...</h1>
-  <p id="resultMessage"></p>
+  <div class="result-card">
+    <div id="resultIcon" class="result-icon">⏳</div>
 
-  <button onclick="goBack()">Back to Stadium</button>
+    <h1 id="resultTitle">Processing Swap</h1>
+
+    <p id="resultMessage">
+      Please wait while we confirm your request.
+    </p>
+
+    <div class="result-details" id="resultDetails"></div>
+
+    <button onclick="goBack()">Back to Stadium</button>
+  </div>
 
   <script>
     const result = localStorage.getItem('swapResult');
     const seat = localStorage.getItem('selectedSeat');
     const target = localStorage.getItem('swapTarget');
 
+    const icon = document.getElementById('resultIcon');
     const title = document.getElementById('resultTitle');
     const msg = document.getElementById('resultMessage');
+    const details = document.getElementById('resultDetails');
 
     if (result === 'Accepted') {
-      title.innerText = '🎉 Swap Accepted!';
-      msg.innerText = `You successfully swapped ${seat} → ${target}`;
+      icon.innerText = '🎉';
+      title.innerText = 'Swap Accepted!';
+      msg.innerText = 'Your seat swap was successful.';
+      details.innerText = `You moved from ${seat} → ${target}`;
+      document.body.classList.add('accepted');
     } else {
-      title.innerText = '❌ Swap Declined';
-      msg.innerText = `Your request to ${target} was declined. Try another section.`;
+      icon.innerText = '❌';
+      title.innerText = 'Swap Declined';
+      msg.innerText = 'Another fan declined your request.';
+      details.innerText = `Requested: ${target}`;
+      document.body.classList.add('declined');
     }
 
     function goBack() {
@@ -36,3 +53,4 @@
 
 </body>
 </html>
+
