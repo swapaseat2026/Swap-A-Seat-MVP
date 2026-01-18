@@ -330,3 +330,61 @@ button {
   font-size: 12px;
   opacity: 0.8;
 }
+/* ===== RESULT PAGE ===== */
+
+.result-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top, #7B2FF7, #050008 60%),
+    linear-gradient(120deg, #39FF14, transparent 60%),
+    linear-gradient(180deg, #FF00C8, transparent 60%);
+}
+
+.result-card {
+  background: rgba(0,0,0,0.65);
+  padding: 60px 50px;
+  border-radius: 26px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  box-shadow:
+    0 0 40px rgba(255,0,200,.4),
+    0 0 80px rgba(57,255,20,.3);
+}
+
+.result-icon {
+  font-size: 72px;
+  margin-bottom: 20px;
+}
+
+.result-card h1 {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.result-card p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.result-details {
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #39FF14;
+}
+
+/* STATES */
+.accepted h1 {
+  color: #39FF14;
+  text-shadow: 0 0 20px #39FF14;
+}
+
+.declined h1 {
+  color: #FF4D4D;
+  text-shadow: 0 0 20px #FF4D4D;
+}
